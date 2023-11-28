@@ -46,9 +46,11 @@ namespace ApiTravelCompany.Controllers
             var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey,
                 Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            var claims = new List<Claim> 
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Username)
+                new (JwtRegisteredClaimNames.Sub, user.Username),
+                new (JwtRegisteredClaimNames.Name, user.Name),
+                new (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
