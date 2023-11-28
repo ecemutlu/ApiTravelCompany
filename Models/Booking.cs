@@ -11,11 +11,12 @@ namespace ApiTravelCompany.Models
         [ForeignKey("House")]
         public string HouseId { get; set; }
         [ForeignKey("User")]
-        public string CustomerUsername { get; set; }       
-        public DateOnly DateFrom { get; set; }
-        public DateOnly DateTo { get; set; }
+        public string CustomerUsername { get; set; }
         [Required]
-        public virtual House House { get; set; }
+        public DateOnly DateFrom { get; set; }
+        [Required]
+        public DateOnly DateTo { get; set; }
+
         [Required]
         public virtual string CustomerNames { get; set; }
     }
