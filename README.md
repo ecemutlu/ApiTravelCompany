@@ -1,5 +1,5 @@
 # ApiTravelCompany
-Source code:
+Swagger:
 https://apitravelcompany20231129002128.azurewebsites.net/swagger/index.html
 Video link:
 https://ecestorageaccount.blob.core.windows.net/se4458-19070001034/ApiTravelCompany - Microsoft Visual Studio 2023-11-29 17-16-41.mp4
